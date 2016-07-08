@@ -1,4 +1,4 @@
-{% set version = "6.0.1" %}
+{% set version = "3.8.2" %}
 package:
   name: cherrypy
   version: {{ version }}
@@ -6,7 +6,7 @@ package:
 source:
   fn: CherryPy-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/C/CherryPy/CherryPy-{{ version }}.tar.gz
-  md5: e7a11392e40bf2bef7672e31653cf6b0
+  sha256: 423f0d459613604819e99ac4a55217d6bd0aaa9c970b92ba13a13aa17f21c65a
 
 build:
   number: 0
