@@ -1,12 +1,15 @@
-{% set version = "3.8.2" %}
+{% set name = "cherrypy" %}
+{% set camelName = "CherryPy" %}
+{% set version = "7.1.0" %}
+
 package:
   name: cherrypy
   version: {{ version }}
 
 source:
-  fn: CherryPy-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/C/CherryPy/CherryPy-{{ version }}.tar.gz
-  sha256: 423f0d459613604819e99ac4a55217d6bd0aaa9c970b92ba13a13aa17f21c65a
+  fn: {{ camelName }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ camelName[0] }}/{{ camelName }}/{{ camelName }}-{{ version }}.tar.gz
+  sha256: 64dca80ccadae4ed8e4ea94119bf76ed9746743c2bd57ec40af534680cbef021
 
 build:
   number: 0
@@ -35,7 +38,11 @@ test:
 about:
   home: http://www.cherrypy.org
   license: BSD 3-Clause
+  license_file: cherrypy/LICENSE.txt
+  license_family: BSD
   summary: 'Object-Oriented HTTP framework'
+  dev_url: https://github.com/cherrypy/cherrypy
+  doc_url: http://docs.cherrypy.org/en/latest/
 
 extra:
   recipe-maintainers:
