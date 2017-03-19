@@ -15,6 +15,8 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  entry_points:
+      - cherryd = cherrypy.__main__:run
   number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
@@ -22,10 +24,18 @@ requirements:
   build:
     - python
     - setuptools
+    - setuptools_scm
 
   run:
     - python
     - six
+    - cheroot >=5.2.0
+    - portend >=1.6.1
+    - simplejson
+    - routes >=2.3.1
+    - pyopenssl
+    - python-memcached >=1.58
+    - flup
 
 test:
   imports:
@@ -42,10 +52,10 @@ test:
 
 about:
   home: http://www.cherrypy.org
-  license: BSD 3-Clause
   license_file: cherrypy/LICENSE.txt
+  license: BSD 3-Clause
   license_family: BSD
-  summary: 'Object-Oriented HTTP framework'
+  summary: Object-Oriented HTTP framework
   dev_url: https://github.com/cherrypy/cherrypy
   doc_url: http://docs.cherrypy.org/en/latest/
 
