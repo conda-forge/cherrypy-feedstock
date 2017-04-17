@@ -1,8 +1,8 @@
 {% set name = "CherryPy" %}
-{% set version = "8.0.0" %}
+{% set version = "10.2.1" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "befec870af874b63e7cb28658e2635d3ae953d6234cc65ef675aa6b8735f79ce" %}
+{%set hash_val = "2ee7e514de0167b63233a6bba25dda2bb9d5ef800da8ea3a0282a9a57a382274" %}
 {%set build_num = "0" %}
 
 package:
