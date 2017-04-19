@@ -23,7 +23,7 @@ requirements:
     - python
     - setuptools
     - setuptools_scm
-    - pytest_runner
+    - pytest-runner
 
   run:
     - python
