@@ -31,7 +31,7 @@ requirements:
     - cheroot >=5.2.0
     - portend >=1.6.1
     - simplejson
-    - routes>=2.3.1
+    - routes >=2.3.1
     - pyopenssl
     - python-memcached >=1.58
     - flup
