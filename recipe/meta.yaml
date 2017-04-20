@@ -34,7 +34,7 @@ requirements:
     - routes >=2.3.1
     - pyopenssl
     - python-memcached >=1.58
-    - flup  # [not win]
+    - flup  # [py3k]
     - pypiwin32  # [win32]
     
 
