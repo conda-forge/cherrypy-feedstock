@@ -34,7 +34,7 @@ requirements:
     - routes >=2.3.1
     - pyopenssl
     - python-memcached >=1.58
-    - flup
+    - flup  # [not win]
     - pypiwin32  # [win32]
     
 
@@ -53,7 +53,7 @@ test:
 
 about:
   home: http://www.cherrypy.org
-  license_file: cherrypy/LICENSE.txt
+  license_file: LICENSE.md
   license: BSD 3-Clause
   license_family: BSD
   summary: 'Object-Oriented HTTP framework'
