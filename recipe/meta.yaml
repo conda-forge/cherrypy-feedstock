@@ -1,21 +1,21 @@
 {% set name = "CherryPy" %}
 {% set version = "8.0.0" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "befec870af874b63e7cb28658e2635d3ae953d6234cc65ef675aa6b8735f79ce" %}
-{%set build_num = "0" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "befec870af874b63e7cb28658e2635d3ae953d6234cc65ef675aa6b8735f79ce" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
