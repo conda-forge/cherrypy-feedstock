@@ -14,9 +14,9 @@ Summary: Object-Oriented HTTP framework
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/cherrypy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cherrypy-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/cherrypy-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/cherrypy-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/cherrypy-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/cherrypy-feedstock/branch/master)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tmpn7bly8b4-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tmpn7bly8b4-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/tmpn7bly8b4-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tmpn7bly8b4-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tmpn7bly8b4-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tmpn7bly8b4-feedstock/branch/master)
 
 Current release info
 ====================
