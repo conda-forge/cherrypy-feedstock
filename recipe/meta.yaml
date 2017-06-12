@@ -22,10 +22,17 @@ requirements:
   build:
     - python
     - setuptools
-
+    - setuptools_scm
+  
   run:
     - python
     - six
+    - simplejson
+    - routes >=2.3.1
+    - pyopenssl
+    - python-memcached >=1.58
+    - flup
+    - pypiwin32  # [win32]
 
 test:
   imports:
