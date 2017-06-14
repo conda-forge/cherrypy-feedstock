@@ -26,8 +26,9 @@ requirements:
   
   run:
     - python
-    - cheroot
     - six
+    - cheroot >=5.2.0
+    - portend >=1.6.1
     - simplejson
     - routes >=2.3.1
     - pyopenssl
