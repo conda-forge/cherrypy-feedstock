@@ -26,6 +26,7 @@ requirements:
   
   run:
     - python
+    - cheroot
     - six
     - simplejson
     - routes >=2.3.1
