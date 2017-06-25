@@ -22,10 +22,18 @@ requirements:
   build:
     - python
     - setuptools
+    - setuptools_scm
 
   run:
     - python
     - six
+    - cheroot >=5.2.0
+    - portend >=1.6.1
+    - routes >=2.3.1
+    - pyopenssl
+    - python-memcached >=1.58
+    - flup
+    - pypiwin32  # [win32]
 
 test:
   imports:
@@ -43,7 +51,7 @@ test:
 about:
   home: http://www.cherrypy.org
   license: BSD 3-Clause
-  license_file: cherrypy/LICENSE.txt
+  license_file: LICENSE.md
   license_family: BSD
   summary: 'Object-Oriented HTTP framework'
   dev_url: https://github.com/cherrypy/cherrypy
