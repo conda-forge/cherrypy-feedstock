@@ -39,7 +39,6 @@ test:
     - cherrypy.scaffold
     - cherrypy.test
     - cherrypy.tutorial
-    - cherrypy.wsgiserver
 
   commands:
     - cherryd -h
