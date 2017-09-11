@@ -16,6 +16,8 @@ source:
   {{ hash_type }}: {{ hash }}
 
 build:
+  entry_points:
+    - cherryd = cherrypy.__main__:run
   noarch: python
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
