@@ -1,9 +1,8 @@
 {% set name = "CherryPy" %}
-{% set version = "14.0.0" %}
+{% set version = "14.0.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "5f5ee020d6547a8d452b3560775ca2374ffe2ff8c0aec1b272e93b6af80d850e" %}
-{% set build = 0 %}
+{% set hash = "721d09bbeedaf5b3493e9e644ae9285d776ea7f16b1d4a0a5aaec7c0d22e5074" %}
 
 package:
   name: {{ name|lower }}
@@ -17,7 +16,7 @@ build:
   entry_points:
     - cherryd = cherrypy.__main__:run
   noarch: python
-  number: {{ build }}
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -30,7 +29,7 @@ requirements:
     - python
     - setuptools
     - six >=1.11.0
-    - cheroot >=5.8.3
+    - cheroot >=5.9.1
     - portend >=2.1.1
     - jaraco.classes
 
