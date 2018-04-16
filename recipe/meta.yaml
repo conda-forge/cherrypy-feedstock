@@ -3,7 +3,6 @@
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
 {% set hash = "721d09bbeedaf5b3493e9e644ae9285d776ea7f16b1d4a0a5aaec7c0d22e5074" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -30,7 +29,7 @@ requirements:
     - python
     - setuptools
     - six >=1.11.0
-    - cheroot >=5.8.3
+    - cheroot >=5.9.1
     - portend >=2.1.1
     - jaraco.classes
 
