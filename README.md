@@ -14,12 +14,15 @@ Summary: Object-Oriented HTTP framework
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/cherrypy-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/cherrypy-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/cherrypy-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/cherrypy-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cherrypy/badges/version.svg)](https://anaconda.org/conda-forge/cherrypy)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/cherrypy/badges/downloads.svg)](https://anaconda.org/conda-forge/cherrypy)
+[![Conda Recipe](https://img.shields.io/badge/recipe-cherrypy-green.svg)](https://anaconda.org/conda-forge/cherrypy)
+[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/cherrypy.svg)](https://anaconda.org/conda-forge/cherrypy)
+[![Conda Version](https://img.shields.io/conda/vn/conda-forge/cherrypy.svg)](https://anaconda.org/conda-forge/cherrypy)
+[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/cherrypy.svg)](https://anaconda.org/conda-forge/cherrypy)
 
 Installing cherrypy
 ===================
