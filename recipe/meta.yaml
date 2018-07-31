@@ -16,7 +16,7 @@ build:
   entry_points:
     - cherryd = cherrypy.__main__:run
   noarch: python
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
