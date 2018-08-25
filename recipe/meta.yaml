@@ -14,7 +14,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - cherryd = cherrypy.__main__:run
@@ -35,6 +35,7 @@ requirements:
     - simplejson
     - routes >=2.3.1
     - pyopenssl
+    - pywin32  # [win]
 
 test:
   imports:
