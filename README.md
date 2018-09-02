@@ -9,6 +9,10 @@ Feedstock license: BSD 3-Clause
 
 Summary: Object-Oriented HTTP framework
 
+CherryPy is a pythonic, object-oriented web framework.
+It allows developers to build web applications in much the same way they would
+build any other object-oriented Python program. This results in smaller source
+code developed in less time.
 
 
 Current build status
