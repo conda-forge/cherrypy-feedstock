@@ -17,6 +17,7 @@ build:
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
   entry_points:
     - cherryd = cherrypy.__main__:run
+  skip: True  # [py27 or py34]
 
 requirements:
   host:
