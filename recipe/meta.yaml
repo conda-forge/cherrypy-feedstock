@@ -1,20 +1,17 @@
 {% set name = "CherryPy" %}
-{% set version = "18.1.0" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "4dd2f59b5af93bd9ca85f1ed0bb8295cd0f5a8ee2b84d476374d4e070aa5c615" %}
+{% set version = "18.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6585c19b5e4faffa3613b5bf02c6a27dcc4c69a30d302aba819639a2af6fa48b
 
 build:
-  number: 1000
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - cherryd = cherrypy.__main__:run
   skip: True  # [py27 or py34]
@@ -31,7 +28,6 @@ requirements:
     - cheroot >=6.2.4
     - portend >=2.1.1
     - zc.lockfile
-    - contextlib2
     - simplejson
     - routes >=2.3.1
     - pyopenssl
