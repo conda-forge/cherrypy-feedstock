@@ -23,7 +23,6 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - six >=1.11.0
     - more-itertools
     - cheroot >=6.2.4
     - portend >=2.1.1
