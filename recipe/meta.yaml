@@ -1,5 +1,5 @@
 {% set name = "CherryPy" %}
-{% set version = "18.1.2" %}
+{% set version = "18.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 48de31ba3db04c5354a0fcf8acf21a9c5190380013afca746d50237c9ebe70f0
+  sha256: 16fc226a280cd772ede7c309d3964002196784ac6615d8bface52be12ff51230
 
 build:
   number: 0
