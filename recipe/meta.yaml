@@ -1,5 +1,5 @@
 {% set name = "CherryPy" %}
-{% set version = "18.2.0" %}
+{% set version = "18.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 16fc226a280cd772ede7c309d3964002196784ac6615d8bface52be12ff51230
+  sha256: 683e687e7c7b1ba31ef86a113b1eafd0407269fed175bf488d3c839d37d1cc60
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - cherryd = cherrypy.__main__:run
   skip: True  # [py27 or py34]
