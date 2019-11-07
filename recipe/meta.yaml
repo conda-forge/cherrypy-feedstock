@@ -14,7 +14,7 @@ build:
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - cherryd = cherrypy.__main__:run
-  skip: True  # [py27 or py34]
+  skip: True  # [py<35]
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - more-itertools
-    - cheroot >=6.2.4
+    - cheroot >=8.2.1
     - portend >=2.1.1
     - zc.lockfile
     - simplejson
