@@ -1,5 +1,5 @@
 {% set name = "CherryPy" %}
-{% set version = "18.3.0" %}
+{% set version = "18.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 683e687e7c7b1ba31ef86a113b1eafd0407269fed175bf488d3c839d37d1cc60
+  sha256: e5be00304ca303d7791d14b5ce1436428e18939b91806250387c363ae56c8f8f
 
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - cherryd = cherrypy.__main__:run
-  skip: True  # [py27 or py34]
+  skip: True  # [py<35]
 
 requirements:
   host:
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - more-itertools
-    - cheroot >=6.2.4
+    - cheroot >=8.2.1
     - portend >=2.1.1
     - zc.lockfile
     - simplejson
