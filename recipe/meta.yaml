@@ -1,20 +1,19 @@
-{% set name = "CherryPy" %}
 {% set version = "18.4.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: cherrypy
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/C/CherryPy/CherryPy-{{ version }}.tar.gz
   sha256: e5be00304ca303d7791d14b5ce1436428e18939b91806250387c363ae56c8f8f
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  skip: True  # [py<35]
   entry_points:
     - cherryd = cherrypy.__main__:run
-  skip: True  # [py<35]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
@@ -40,13 +39,12 @@ test:
     - cherrypy.scaffold
     - cherrypy.test
     - cherrypy.tutorial
-
   commands:
     - cherryd -h
 
 about:
   home: http://www.cherrypy.org
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE.md
   license_family: BSD
   summary: 'Object-Oriented HTTP framework'
