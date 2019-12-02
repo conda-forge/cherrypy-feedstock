@@ -26,6 +26,7 @@ requirements:
     - cheroot >=8.2.1
     - portend >=2.1.1
     - zc.lockfile
+    - jaraco.collections
     - simplejson
     - routes >=2.3.1
     - pyopenssl
