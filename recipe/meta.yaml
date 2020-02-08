@@ -1,4 +1,4 @@
-{% set version = "18.4.0" %}
+{% set version = "18.5.0" %}
 
 package:
   name: cherrypy
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/C/CherryPy/CherryPy-{{ version }}.tar.gz
-  sha256: e5be00304ca303d7791d14b5ce1436428e18939b91806250387c363ae56c8f8f
+  sha256: 63b2f61c38c469112145bd4e4e2385cd18f3233799e7a33bd447df468916d22b
 
 build:
   number: 0
@@ -26,6 +26,7 @@ requirements:
     - cheroot >=8.2.1
     - portend >=2.1.1
     - zc.lockfile
+    - jaraco.collections
     - simplejson
     - routes >=2.3.1
     - pyopenssl
