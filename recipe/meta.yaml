@@ -1,4 +1,4 @@
-{% set version = "18.5.0" %}
+{% set version = "18.6.0" %}
 
 package:
   name: cherrypy
@@ -6,14 +6,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/C/CherryPy/CherryPy-{{ version }}.tar.gz
-  sha256: 63b2f61c38c469112145bd4e4e2385cd18f3233799e7a33bd447df468916d22b
+  sha256: 56608edd831ad00991ae585625e0206ed61cf1a0850e4b2cc48489fb2308c499
 
 build:
   number: 0
-  skip: True  # [py<35]
+  skip: true  # [py<35]
   entry_points:
     - cherryd = cherrypy.__main__:run
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -48,7 +48,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE.md
   license_family: BSD
-  summary: 'Object-Oriented HTTP framework'
+  summary: Object-Oriented HTTP framework
   description: |
     CherryPy is a pythonic, object-oriented web framework.
     It allows developers to build web applications in much the same way they would
