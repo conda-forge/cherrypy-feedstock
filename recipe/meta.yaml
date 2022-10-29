@@ -9,7 +9,7 @@ source:
   sha256: 9b48cfba8a2f16d5b6419cc657e6d51db005ba35c5e3824e4728bb03bbc7ef9b
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py<35]
   entry_points:
     - cherryd = cherrypy.__main__:run
