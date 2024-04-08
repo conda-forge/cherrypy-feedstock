@@ -1,4 +1,4 @@
-{% set version = "18.8.0" %}
+{% set version = "18.9.0" %}
 
 package:
   name: cherrypy
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/C/CherryPy/CherryPy-{{ version }}.tar.gz
-  sha256: 9b48cfba8a2f16d5b6419cc657e6d51db005ba35c5e3824e4728bb03bbc7ef9b
+  sha256: 6b06c191ce71a86461f30572a1ab57ffc09f43143ba8e42c103c7b3347220eb1
 
 build:
-  number: 3
+  number: 0
   skip: true  # [py<35]
   entry_points:
     - cherryd = cherrypy.__main__:run
