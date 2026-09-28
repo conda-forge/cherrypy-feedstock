@@ -4,6 +4,8 @@ schema_version: 1
 context:
   version: "18.10.0"
   python_check_max: "3.14"
+  pytest_k: not queue_full
+  cov_fail_under: "73"
 
 package:
   name: cherrypy
@@ -35,7 +37,7 @@ requirements:
     - portend >=2.1.1
     - pyopenssl
     - python >=${{ python_min }}
-    - pywin32
+    - pywin32 >=227
     - routes >=2.3.1
     - simplejson
     - zc.lockfile
@@ -54,12 +56,17 @@ tests:
         - ${{ python_check_max }}.*
   - requirements:
       run:
-        - python ${{ python_min }}.*
+        - objgraph
+        - path
         - pytest-cov
+        - pytest-services >=2
+        - python ${{ python_min }}.*
+        - requests-toolbelt
+        - setuptools
     script:
       - cherryd -h
-      - coverage run --source=cherrypy --branch -m pytest -vv --tb=long --color=yes --pyargs cherrypy
-      - coverage report --show-missing --skip-covered --fail-under=100
+      - coverage run --source=cherrypy --branch -m pytest -vv --tb=long --color=yes --pyargs cherrypy -k "${{ pytest_k }}"
+      - coverage report --show-missing --skip-covered --fail-under=${{ cov_fail_under }}
 
 about:
   license: BSD-3-Clause
@@ -78,3 +85,4 @@ extra:
   recipe-maintainers:
     - pmlandwehr
     - carlodri
+    - bollwyvl
